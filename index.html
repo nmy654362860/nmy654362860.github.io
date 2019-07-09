@@ -290,6 +290,164 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://nmy654362860.github.io/myday02.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="nmy654362860">
+      <meta itemprop="description" content="qq654362860">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="隔壁老年">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/myday02.html" class="post-title-link" itemprop="url">myday02</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-07-07 23:48:54" itemprop="dateCreated datePublished" datetime="2019-07-07T23:48:54+08:00">2019-07-07</time>
+            </span>
+          
+
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-07-09 20:21:31" itemprop="dateModified" datetime="2019-07-09T20:21:31+08:00">2019-07-09</time>
+              </span>
+            
+          
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          <br>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>java的三大特性：<br>1.封装：将对象的属性私有化，隐藏具体的实现细节，给用户提供方法，用户通过对象方法对对象进行操作，<br>不必了解具体如何实现。<br>2.继承：一个类通过继承另一个类来实现另一个类中方法的使用<br>，被继承的类称为父类，父类是子类通用属性和方法的抽取。<br>例如：Cat，Dog类可以抽取一个Animal类Animal类可以包含name，age属性还有eat和work方法。<br>Cat，Dog通过重写eat和work来实现具体方法的细节。<br>优点：提高了代码的复用性（不会减少代码的运行效率）。<br>缺点：增加了类之间的耦合性。<br>this：代表调用成员方法的这个对象，类中成员变量。<br>super：代表所继承的父类的具体某个属性或者方法。<br>3.多态：同一对象在不同时刻表现的不同状态</p>
+<p>static：<br>静态方法只能被继承不能被重写；<br>静态的成员方法只能访问静态的成员方法与成员变量，不能访问非静态成员方法及变量。<br>非静态的成员方法可以访问非静态的成员方法及变量也可以访问静态的成员方法及变量。<br><img src="images/essay02/static.png"><br>final：<br>被final修饰的类不能有子类，被final修饰的方法不能被重写，被final修饰的变量只能一次赋值。<br><img src="images/essay02/final02.png"><br>byte –&gt; short, char –&gt; int –&gt; long –&gt; float –&gt; double(从小到大)<br>在子类被创建时在堆内存为类分配内存空间存储成员变量，会为父类的变量同样分配空间，当子类通过super.age调用父类成员变量的时候，就会先通过子类对象栈内存储的地址找到为子类开辟的空间进而找到父类成员变量。<br><img src="images/essay02/内存截图.png"><br><img src="images/essay02/继承方法调用内存图.png"></p>
+<p>多态：<br>我们可以说猫是猫，也可以说猫是动物，猫在不同时刻表现出不同的状态就是多态。<br>1.1前提 ：<br>继承，重写，父类的引用指向子类对象<br>1.2多态访问的特点：<br>*<em>成员变量：编译看左边，运行看左边。  *</em>成员方法：编译看左边，运行看右边。<br>优点（多态提高了程序的拓展性）       缺点（不能访问具体子类特有功能）<br>1.3<br>什么时候使用多态：<br>一般把父类作为方法的返回值或者参数   父类作为方法的参数可以传递子类的对象<br>向上转型：Animal a = new Cat（）；  向下转型：Cat c = （Cat）a ；<br>判断a是否由猫类创建：<br>boolean b = a instanceof Cat；<br>2.抽象类：<br>2.1抽象方法<br>抽象方法必须在抽象类中；抽象方法没有方法体；抽象类中可以以没有抽象方法；<br>抽象类的子类要不重写抽象方法要不本身就是一个抽象类。<br>抽象类不能直接创建对象<br>（有构造方法不能直接创建对象使用，而是留给子类初始化使用）<br>抽象方法：<br>public abstract 返回值类型 方法名（参数列表）；<br>3.接口<br>公共的行为规范，接口是个抽象的内容(抽象类可以不重写接口里的方法)<br>定义格式：<br>public interface 接口名{<br>}<br>接口的使用：创建类实现接口并实现接口方法<br>接口成员特点：变量：静态的被final修饰的常量<br>常量的定义：定义变量的名字一般使用大写字母<br>**默认方法 只能在接口里面 可以有方法体(主要用来升级接口)<br>格式：<br>default 返回值类型 方法名（参数列表）{<br>}<br>静态方法<br>私有方法</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://nmy654362860.github.io/myDay01.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -335,13 +493,23 @@
                 
               
 
-              <time title="创建时间：2019-07-05 16:20:57 / 修改时间：22:52:15" itemprop="dateCreated datePublished" datetime="2019-07-05T16:20:57+08:00">2019-07-05</time>
+              <time title="创建时间：2019-07-05 16:20:57" itemprop="dateCreated datePublished" datetime="2019-07-05T16:20:57+08:00">2019-07-05</time>
             </span>
           
 
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-07-09 18:00:29" itemprop="dateModified" datetime="2019-07-09T18:00:29+08:00">2019-07-09</time>
+              </span>
             
           
 
@@ -481,13 +649,23 @@
                 
               
 
-              <time title="创建时间：2019-07-05 13:12:51 / 修改时间：18:45:27" itemprop="dateCreated datePublished" datetime="2019-07-05T13:12:51+08:00">2019-07-05</time>
+              <time title="创建时间：2019-07-05 13:12:51" itemprop="dateCreated datePublished" datetime="2019-07-05T13:12:51+08:00">2019-07-05</time>
             </span>
           
 
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-07-09 20:21:28" itemprop="dateModified" datetime="2019-07-09T20:21:28+08:00">2019-07-09</time>
+              </span>
             
           
 
@@ -525,8 +703,8 @@
       
         
           
-            <p>第一次使用github搭建了基本的环境，在搭建过程中配置ssh key秘钥时由于使用了notepad++导致秘钥一直不对，在参照了视频的流程确定其他过程无误时，将笔记本的快捷方式发送到桌面<br>用笔记本打开复制，就解决了这个问题，后面步骤基本顺利，在选用一个next主题后，将界面布置到主页后，就不知道怎么操作写博客了，后来用b站的视频看了关于hexo的视频知道了操作流程，在文档添加了两个图片，加深自己的操作印象。<br><img src="images/test/test.png"></p>
-<p>我的logo<br><img src="images/test/logo.jpg"></p>
+            <p>第一次使用github搭建了基本的环境，在搭建过程中配置ssh key秘钥时由于使用了notepad++导致秘钥一直不对，在参照了视频的流程确定其他过程无误时，将笔记本的快捷方式发送到桌面<br>用笔记本打开复制，就解决了这个问题，后面步骤基本顺利，在选用一个next主题后，将界面布置到主页后，就不知道怎么操作写博客了，后来用b站的视频看了关于hexo的视频知道了操作流程，在文档添加了两个图片，加深自己的操作印象。<br>将网站搭建完毕后，应该将所学习的东西，<br><img src="images/test/test.png"></p>
+<p>我的logo，<br><img src="images/test/logo.jpg"></p>
 
           
         
@@ -610,7 +788,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -624,6 +802,12 @@
                 <div class="site-state-item site-state-tags">
                   
                     
+                    
+                      
+                    
+                      
+                    
+                      
                     
                       
                     
